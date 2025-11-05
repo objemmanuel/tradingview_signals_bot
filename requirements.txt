@@ -1,0 +1,27 @@
+# FastAPI + Server
+fastapi==0.115.5
+uvicorn[standard]==0.32.0
+
+# Telegram Bot Integration
+python-telegram-bot==21.4
+
+# Data handling and analytics
+pandas==2.2.3
+
+# ORM (optional, for saving results to DB later)
+SQLAlchemy==2.0.36
+
+# Background scheduler for daily/weekly reports
+apscheduler==3.10.4
+
+# Data validation for incoming webhook data
+pydantic==2.9.2
+
+# Environment variable management
+python-dotenv==1.0.1
+
+# Production WSGI server (used by Render)
+gunicorn==23.0.0
+
+# HTTP requests (used by Telegram API or external data sources)
+requests==2.32.3
