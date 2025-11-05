@@ -17,13 +17,13 @@ from apscheduler.triggers.cron import CronTrigger
 
 # -------------------------
 # Configuration (via ENV)
-# -------------------------
-TELEGRAM_BOT_TOKEN = os.getenv("8479095453:AAENuoe1BBCozY6RaWMD0Ta01EY09PIYG5c", "")
-TELEGRAM_CHAT_ID = os.getenv("-1003131825956", "")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "")
 DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://tradingviewbot:nmStBvlf2QhKPyYscxBSSoaw2UwXIiIa@dpg-d45hrd95pdvs73c2p8kg-a/tradingviewsignals")
 PRICE_API = os.getenv("PRICE_API", "binance")  # 'binance' supported by default
-REPORT_DAILY_CRON = os.getenv("REPORT_DAILY_CRON", "0 0 * * *")  # default daily 00:00 UTC
-REPORT_WEEKLY_CRON = os.getenv("REPORT_WEEKLY_CRON", "0 0 * * 0")  # default Sunday 00:00 UTC
+REPORT_DAILY_CRON = os.getenv("REPORT_DAILY_CRON", "0 0 * * *")
+REPORT_WEEKLY_CRON = os.getenv("REPORT_WEEKLY_CRON", "0 0 * * 0")
+
 
 if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
     logging.warning("TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set. The app will still run, but notifications will fail.")
