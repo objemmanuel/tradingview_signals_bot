@@ -8,6 +8,8 @@ python-telegram-bot==21.4
 # Data handling and analytics
 pandas==2.2.3
 
+psycopg2-binary
+
 # ORM (optional, for saving results to DB later)
 SQLAlchemy==2.0.36
 
